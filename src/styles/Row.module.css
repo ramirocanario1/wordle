@@ -1,0 +1,20 @@
+.row {
+}
+
+.row td {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.green {
+  background-color: lime;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.gray {
+  background-color: gray;
+}
