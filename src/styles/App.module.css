@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+:root {
+  --default-color: rgb(233, 233, 233);
+  --green-color: rgb(3, 182, 3);
+  --yellow-color: rgb(250, 225, 0);
+  --gray-color: rgb(54, 54, 54);
+  --blue-color: rgb(17, 84, 230);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: fit-content;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--blue-color);
+  border-radius: 1rem;
+  margin: 3rem auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.title {
+  color: var(--blue-color);
+}

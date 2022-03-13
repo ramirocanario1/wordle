@@ -4,7 +4,7 @@ import Tries from "./Tries";
 import Input from "./Input";
 
 export default function App() {
-  const [word, setWord] = useState("world");
+  const [word, setWord] = useState("JABON");
   const [tries, setTries] = useState([]);
 
   function addTry(word) {
@@ -12,14 +12,18 @@ export default function App() {
     console.log(`We added a new try: ${word}`);
   }
 
-  useEffect(() => {
-    console.log(tries);
-  }, [tries]);
+  useEffect(() => {}, [tries]);
 
   return (
-    <div>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Wordle!</h1>
       <Tries word={word} tries={tries} />
-      <Input addTry={addTry} wordLength={word.length} />
+      <Input
+        addTry={addTry}
+        wordLength={word.length}
+        tries={tries}
+        secretWord={word}
+      />
     </div>
   );
 }

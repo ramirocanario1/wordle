@@ -1,32 +1,19 @@
 import React, { useState } from "react";
 import styles from "../styles/Input.module.css";
+import Keyboard from "./Keyboard";
+import TextInput from "./TextInput";
 
-export default function Input({ addTry, wordLength }) {
+export default function Input({ addTry, wordLength, tries, secretWord }) {
   const [word, setWord] = useState("");
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (wordLength === word.length) {
-      addTry(word);
-      setWord("");
-    } else {
-      console.log("Wrong lenght!");
-    }
-  }
-
-  function handleChange(e) {
-    setWord(e.target.value);
-  }
-
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Write your try"
-        onChange={handleChange}
-        value={word}
+    <div className={styles.container}>
+      <TextInput
+        word={word}
+        setWord={setWord}
+        wordLength={wordLength}
+        addTry={addTry}
       />
-      <button>Try!</button>
-    </form>
+      <Keyboard tries={tries} secretWord={secretWord} />
+    </div>
   );
 }

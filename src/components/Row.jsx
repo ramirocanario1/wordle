@@ -13,7 +13,15 @@ export default function Row({ tryWord, secretWord }) {
   }
 
   if (tryWord === undefined) {
-    return <tr></tr>;
+    return (
+      <tr className={styles.row}>
+        <td className={styles.gray}> </td>
+        <td className={styles.gray}> </td>
+        <td className={styles.gray}> </td>
+        <td className={styles.gray}> </td>
+        <td className={styles.gray}> </td>
+      </tr>
+    );
   }
 
   return (
