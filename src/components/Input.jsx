@@ -13,7 +13,12 @@ export default function Input({ addTry, wordLength, tries, secretWord }) {
         wordLength={wordLength}
         addTry={addTry}
       />
-      <Keyboard tries={tries} secretWord={secretWord} />
+      <Keyboard
+        tries={tries}
+        secretWord={secretWord}
+        word={word}
+        setWord={setWord}
+      />
     </div>
   );
 }

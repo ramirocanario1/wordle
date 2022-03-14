@@ -7,12 +7,14 @@
 
 .input {
   background-color: white;
-  padding: 0 0.5rem;
-  height: 2rem;
+  padding: 0.5rem 1rem;
+  height: fit-content;
   border: 2px solid var(--blue-color);
   width: 100%;
   margin: 0.2rem;
   border-radius: 0.2rem;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .input:focus {
@@ -20,8 +22,8 @@
 }
 
 .button {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   border: none;
   background-color: var(--blue-color);
   border-radius: 0.2rem;

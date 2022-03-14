@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "../styles/Keyboard.module.css";
 import Key from "./Key";
+import { FiDelete } from "react-icons/fi";
 
 const LETTERS = [
   "Q",
@@ -31,24 +32,51 @@ const LETTERS = [
   "M",
 ];
 
-export default function Keyboard({ tries, secretWord }) {
-  function paintKey(letter) {}
+export default function Keyboard({ tries, secretWord, word, setWord }) {
+  function handleClick(e) {
+    setWord(word + e.target.value);
+  }
+
+  function handleDelete(e) {
+    setWord(word.slice(0, -1));
+  }
 
   return (
     <section className={styles.container}>
       <div className={styles.row}>
         {LETTERS.slice(0, 10).map((l) => (
-          <Key key={l} letter={l} tries={tries} secretWord={secretWord} />
+          <Key
+            key={l}
+            letter={l}
+            tries={tries}
+            secretWord={secretWord}
+            handleClick={handleClick}
+          />
         ))}
       </div>
       <div className={styles.row}>
         {LETTERS.slice(10, 19).map((l) => (
-          <Key key={l} letter={l} tries={tries} secretWord={secretWord} />
+          <Key
+            key={l}
+            letter={l}
+            tries={tries}
+            secretWord={secretWord}
+            handleClick={handleClick}
+          />
         ))}
+        <button className={styles.delete_key} onClick={handleDelete}>
+          {<FiDelete className={styles.delete_icon} />}
+        </button>
       </div>
       <div className={styles.row}>
         {LETTERS.slice(19).map((l) => (
-          <Key key={l} letter={l} tries={tries} secretWord={secretWord} />
+          <Key
+            key={l}
+            letter={l}
+            tries={tries}
+            secretWord={secretWord}
+            handleClick={handleClick}
+          />
         ))}
       </div>
     </section>

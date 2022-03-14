@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Key.module.css";
 
-export default function Key({ letter, tries = [], secretWord }) {
+export default function Key({ letter, tries = [], secretWord, handleClick }) {
   const [color, setColor] = useState("default");
 
   // from https://stackoverflow.com/questions/10710345/finding-all-indexes-of-a-specified-character-within-a-string
@@ -40,10 +40,15 @@ export default function Key({ letter, tries = [], secretWord }) {
 
   useEffect(() => {
     getColor();
-    if (letter === "A") {
-      console.log(`${letter}: ${color}`);
-    }
   }, [tries]);
 
-  return <button className={`${styles.key} ${styles[color]}`}>{letter}</button>;
+  return (
+    <button
+      onClick={handleClick}
+      value={letter}
+      className={`${styles.key} ${styles[color]}`}
+    >
+      {letter}
+    </button>
+  );
 }

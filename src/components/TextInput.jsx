@@ -14,14 +14,13 @@ export default function TextInput({ word, setWord, wordLength, addTry }) {
   }
 
   function handleChange(e) {
-    setWord(e.target.value);
+    setWord(e.target.value.toUpperCase());
   }
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <input
         type="text"
-        // placeholder="Write your try"
         onChange={handleChange}
         value={word}
         className={styles.input}
