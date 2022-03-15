@@ -4,7 +4,7 @@ import Tries from "./Tries";
 import Input from "./Input";
 
 export default function App() {
-  const [word, setWord] = useState("QUESO");
+  const [word, setWord] = useState("PASEO");
   const [tries, setTries] = useState([]);
   const [won, setWon] = useState(false);
   const [lost, setLost] = useState(false);
