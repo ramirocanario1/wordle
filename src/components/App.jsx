@@ -3,8 +3,12 @@ import styles from "../styles/App.module.css";
 import Tries from "./Tries";
 import Input from "./Input";
 
+import { WORDS } from "../../data/words";
+
 export default function App() {
-  const [word, setWord] = useState("PIANO");
+  const [word, setWord] = useState(
+    WORDS[Math.floor(Math.random() * WORDS.length)]
+  );
   const [tries, setTries] = useState([]);
   const [won, setWon] = useState(false);
   const [lost, setLost] = useState(false);
@@ -21,7 +25,7 @@ export default function App() {
     <div className={styles.won_container}>
       <h1>You won the game!</h1>
       <span>
-        Tries: <span className={styles.tries}>{tries.length}</span>{" "}
+        Attempts: <span className={styles.tries}>{tries.length}</span>{" "}
       </span>
     </div>
   );

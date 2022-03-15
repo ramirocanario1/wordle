@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Row.module.css";
 
-export default function Row({ tryWord, secretWord }) {
+export default function Row({ letters, tryWord, secretWord }) {
   function paintCell(letter, position) {
     if (secretWord[position] === letter) {
       return "green";
@@ -12,16 +12,16 @@ export default function Row({ tryWord, secretWord }) {
     }
   }
 
+  let emptyRow = [];
   if (tryWord === undefined) {
-    return (
-      <tr className={styles.row}>
-        <td className={styles.gray}> </td>
-        <td className={styles.gray}> </td>
-        <td className={styles.gray}> </td>
-        <td className={styles.gray}> </td>
-        <td className={styles.gray}> </td>
-      </tr>
-    );
+    for (let i = 0; i < secretWord.length; ++i) {
+      emptyRow.push(
+        <td key={i} className={styles.gray}>
+          {" "}
+        </td>
+      );
+    }
+    return <tr className={styles.row}>{emptyRow}</tr>;
   }
 
   return (

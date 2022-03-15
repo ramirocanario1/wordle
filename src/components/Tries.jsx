@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Tries.module.css";
 import Row from "./Row";
 
 export default function Tries({ word, tries }) {
+  // const [letters, setLetters] = useState([]);
+
+  // function timesInString(letter, string) {
+  //   return string.split(letter).length - 1;
+  // }
+
+  // useEffect(() => {
+  //   let list = [];
+  //   for (let i = 0; i < word.length; ++i) {
+  //     list.push({ letter: word[i], amount: timesInString(word[i], word) });
+  //   }
+  //   setLetters(list);
+  // }, []);
+
   return (
     <div className={styles.container}>
       <table>
