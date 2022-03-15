@@ -4,7 +4,7 @@ import Row from "./Row";
 
 export default function Tries({ word, tries }) {
   return (
-    <div>
+    <div className={styles.container}>
       <table>
         <tbody>
           <Row key={0} tryWord={tries[0]} secretWord={word} />

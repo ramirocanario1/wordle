@@ -64,9 +64,6 @@ export default function Keyboard({ tries, secretWord, word, setWord }) {
             handleClick={handleClick}
           />
         ))}
-        <button className={styles.delete_key} onClick={handleDelete}>
-          {<FiDelete className={styles.delete_icon} />}
-        </button>
       </div>
       <div className={styles.row}>
         {LETTERS.slice(19).map((l) => (
@@ -78,6 +75,9 @@ export default function Keyboard({ tries, secretWord, word, setWord }) {
             handleClick={handleClick}
           />
         ))}
+        <button className={styles.delete_key} onClick={handleDelete}>
+          {<FiDelete className={styles.delete_icon} />}
+        </button>
       </div>
     </section>
   );

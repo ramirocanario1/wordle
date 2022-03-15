@@ -14,11 +14,13 @@ body {
 
 .container {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border: 3px solid var(--blue-color);
+  max-width: 50rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 0.1fr 2fr 1fr;
+  align-items: stretch;
+  justify-items: center;
+  /* border: 3px solid var(--blue-color); */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -33,11 +35,12 @@ body {
 .won_container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
   border-radius: 1rem;
   background-color: white;
-  margin-top: 1rem;
+  margin: 1rem 0 2rem 0;
   text-align: center;
 }
 
