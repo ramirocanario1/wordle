@@ -1,6 +1,3 @@
-.row {
-}
-
 .row td {
   width: 4rem;
   height: 3rem;
@@ -11,33 +8,30 @@
 }
 
 .green {
-  background-color: var(--green-color);
-  /* background: rgb(1, 147, 1);
+  background: rgb(1, 147, 1);
   background: linear-gradient(
     131deg,
     rgba(1, 147, 1, 1) 0%,
     rgba(3, 182, 3, 1) 100%
-  ); */
+  );
   color: white;
 }
 
 .yellow {
-  background-color: var(--yellow-color);
-  /* background: rgb(217, 195, 0);
+  background: rgb(217, 195, 0);
   background: linear-gradient(
     131deg,
     rgba(217, 195, 0, 1) 0%,
     rgba(250, 225, 0, 1) 100%
-  ); */
+  );
 }
 
 .gray {
-  background-color: var(--gray-color);
-  /* background: rgb(41, 41, 41);
+  background: rgb(41, 41, 41);
   background: linear-gradient(
     131deg,
     rgba(41, 41, 41, 1) 0%,
     rgba(54, 54, 54, 1) 100%
-  ); */
+  );
   color: white;
 }
