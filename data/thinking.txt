@@ -1,0 +1,20 @@
+
+word = PARAGUAS
+repetidas = [
+  {
+    letter: "A",
+    remaining: 3
+  }
+]
+
+si va verde =>
+  si está en "repetidas" =>
+    --remaining
+    VERDE
+
+si va amarillo =>
+  si la letra está en "repetidas" 
+    si remaining > 0 =>
+      AMARILLO
+    sino =>
+      GRIS

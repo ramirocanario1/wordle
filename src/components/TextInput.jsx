@@ -9,7 +9,7 @@ export default function TextInput({ word, setWord, wordLength, addTry }) {
       addTry(word);
       setWord("");
     } else {
-      console.log("Wrong lenght!");
+      console.log("Wrong length");
     }
   }
 

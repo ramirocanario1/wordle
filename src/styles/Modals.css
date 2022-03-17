@@ -1,0 +1,24 @@
+.retry-button,
+.cancel-button {
+  transition: 0.2s ease;
+}
+
+.retry-button {
+  background-color: var(--blue-color);
+}
+
+.cancel-button {
+  background-color: transparent;
+  border: 1px solid var(--blue-color);
+  color: var(--blue-color);
+}
+
+.retry-button:not([disabled]):hover {
+  background-color: var(--blue-color);
+  opacity: 0.8;
+}
+
+.cancel-button:not([disabled]):hover {
+  background-color: transparent;
+  opacity: 0.8;
+}

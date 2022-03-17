@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Row.module.css";
 
-export default function Row({ letters, tryWord, secretWord }) {
+export default function Row({
+  tryWord,
+  secretWord,
+  useLetter,
+  getRemainingLetter,
+}) {
   function paintCell(letter, position) {
     if (secretWord[position] === letter) {
+      useLetter(letter);
       return "green";
     } else if (secretWord.split("").some((l) => l === letter)) {
-      return "yellow";
+      if (getRemainingLetter(letter) > 0) {
+        return "yellow";
+      } else {
+        return "gray";
+      }
     } else {
       return "gray";
     }

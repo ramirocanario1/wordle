@@ -27,30 +27,3 @@ body {
   color: var(--blue-color);
   margin-top: 1rem;
 }
-
-/* LOST & WON TEMPLATE */
-
-.lost_container,
-.won_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: white;
-  margin: 1rem 0 2rem 0;
-  text-align: center;
-}
-
-.lost_container {
-  border: 3px solid rgb(196, 5, 5);
-}
-
-.won_container {
-  border: 3px solid var(--green-color);
-}
-
-.secret_word {
-  font-weight: bold;
-}
